@@ -1,0 +1,45 @@
+.task-list {
+  margin-top: 20px;
+}
+
+.task-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.task-list span {
+  font-size: 14px;
+}
+
+.btn-finish {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-finish:hover {
+  text-decoration: underline;
+}
+
+.btn-outline {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: #f9f9f9;
+}

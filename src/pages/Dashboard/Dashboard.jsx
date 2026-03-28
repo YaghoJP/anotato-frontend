@@ -3,6 +3,7 @@ import Card from "../components/Card/Card";
 import Header from "../components/Header/Header";
 import "./Dashboard.css";
 import { getTasks } from "../../services/tasksService";
+import TaskBox from "../components/Task/TaskBox";
 
 export default function Dashboard() {
 
@@ -36,41 +37,10 @@ export default function Dashboard() {
                 <Card title="Pendentes" value={pendentes}/>
             </section>
 
-            {/* TASK BOX */}
-            <section className="task-box">
-                <div className="task-header">
-                <h2>Tarefas</h2>
-                </div>
-
-                {/* INPUT */}
-                <div className="task-create">
-                <input placeholder="Nova tarefa..." />
-                <button>Adicionar</button>
-                </div>
-
-                {/* LISTA (somente pendentes) */}
-                <div className="task-list">
-                <ul>
-
-                    <li>
-                    <span>Estudar React</span>
-                    <button className="btn-finish">Finalizar</button>
-                    </li>
-
-                    <li>
-                    <span>Fazer projeto</span>
-                    <button className="btn-finish">Finalizar</button>
-                    </li>
-
-                    <li>
-                    <span>Estudar backend</span>
-                    <button className="btn-finish">Finalizar</button>
-                    </li>
-
-                </ul>
-                </div>
-
-            </section>
+            <TaskBox 
+            tasks={tasks}
+            setTasks={setTasks}
+            />
         </main>
     </div>
     );

@@ -1,129 +1,18 @@
-/* ===== BASE ===== */
 .dashboard {
   min-height: 100vh;
   background: #f3f4f6;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-/* ===== MAIN ===== */
 .dashboard-main {
   max-width: 900px;
   margin: 0 auto;
   padding: 30px 20px;
 }
 
-
-/* ===== CARDS ===== */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-
-/* ===== TASK BOX ===== */
-.task-box {
-  margin-top: 30px;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-.task-header {
-  display: flex;
-  align-items: center;
-}
-
-
-/* ===== INPUT ===== */
-.task-create {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.task-create input {
-  flex: 1;
-  padding: 10px;
-
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.task-create button {
-  padding: 10px 20px;
-  background: #3b82f6;
-  color: white;
-
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.task-create button:hover {
-  background: #2563eb;
-}
-
-
-/* ===== LISTA ===== */
-.task-list {
-  margin-top: 20px;
-}
-
-.task-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.task-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.task-list span {
-  font-size: 14px;
-}
-
-
-/* botão finalizar */
-.btn-finish {
-  background: none;
-  border: none;
-  color: #3b82f6;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.btn-finish:hover {
-  text-decoration: underline;
-}
-
-
-/* botão outline */
-.btn-outline {
-  padding: 8px 16px;
-  border: 1px solid #ccc;
-  background: white;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.btn-outline:hover {
-  background: #f9f9f9;
-}

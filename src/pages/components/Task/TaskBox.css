@@ -1,0 +1,17 @@
+.task-box {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  width: 100%;
+}
+
+.task-header {
+  margin-bottom: 10px;
+}
+
+.task-header h2 {
+  font-size: 18px;
+  color: #fff;
+}

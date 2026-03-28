@@ -1,0 +1,27 @@
+.task-create {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.task-create input {
+  flex: 1;
+  padding: 10px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.task-create button {
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.task-create button:hover {
+  background: #2563eb;
+}
