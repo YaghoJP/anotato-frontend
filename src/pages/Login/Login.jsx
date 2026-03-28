@@ -20,9 +20,9 @@ function Login(){
 
             await loginRequest(email, password);
 
-            toast.success();
+            toast.success("Logado com sucesso.");
 
-            navigate('/')
+            navigate('/dashboard')
 
         } catch (error) {
             const message = error.response?.data?.error || "Erro ao cadastrar."

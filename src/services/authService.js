@@ -18,5 +18,15 @@ export async function loginRequest(email, password) {
         password
     });
 
+    localStorage.setItem("token", response.data.token);
+
     return response.data;
+}
+
+export function logout(){
+    localStorage.removeItem("token");
+}
+
+export function getToken(){
+    return localStorage.getItem("token");
 }

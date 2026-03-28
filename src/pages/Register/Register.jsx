@@ -20,7 +20,7 @@ function Register(){
       
       toast.success("Conta criada com sucesso!");
 
-      navigate('/dashboard');
+      navigate('/login');
 
     }catch(error){
       const message = error.response?.data?.error || "Erro ao cadastrar."

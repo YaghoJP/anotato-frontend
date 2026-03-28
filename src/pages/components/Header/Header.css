@@ -1,0 +1,44 @@
+.header-container {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+.header-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.tab {
+  padding: 8px 14px;
+  border: none;
+  background: #eee;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-logout {
+  padding: 8px 14px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background: #f87171;
+}
