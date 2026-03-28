@@ -5,14 +5,12 @@ function TaskList({ tasks, onFinish }) {
   return (
     <div className="task-list">
       <ul>
-        {tasks
-        .filter(task => !task.completed)
-        .map((task) => (
-            <TaskItem
+        {tasks.map(task => (
+          <TaskItem
             key={task.id}
             task={task}
             onFinish={onFinish}
-            />
+          />
         ))}
       </ul>
     </div>

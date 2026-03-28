@@ -8,12 +8,14 @@ function TaskItem({ task, onFinish }) {
         {task.title}
       </span>
 
-      <button
-        className="btn-finish"
-        onClick={() => onFinish(task.id)}
-      >
-        {task.completed ? "Desfazer" : "Finalizar"}
-      </button>
+      {onFinish && (
+        <button
+          className="btn-finish"
+          onClick={() => onFinish(task.id)}
+        >
+          {task.completed ? "Desfazer" : "Finalizar"}
+        </button>
+      )}
 
     </li>
   );

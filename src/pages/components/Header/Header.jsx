@@ -3,7 +3,8 @@ import { logout } from '../../../services/authService';
 import './Header.css'
 
 function Header({
-    title
+    title,
+    onOpenCompleted
 }) {
 
     const navigate = useNavigate();
@@ -23,12 +24,8 @@ function Header({
             
 
                 <div className='header-actions'>
-                    <button 
-                        className="tab active">
-                        Pendentes
-                    </button>
-
                     <button
+                        onClick={onOpenCompleted}
                         className="tab completed">
                         Finalizadas
                     </button>
