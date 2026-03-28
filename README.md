@@ -1,7 +1,7 @@
 # 🧠 Task Manager - Frontend
 
 🔗 **Acesse a aplicação:**
-
+https://anotato-frontend.vercel.app/
 ---
 
 Este projeto é um **gerenciador de tarefas (To-Do List)** desenvolvido com foco em **aprendizado prático de React e integração com APIs**.
@@ -113,7 +113,7 @@ npm run dev
 ## 🌐 Deploy
 
 O projeto está hospedado na Vercel:
-
+https://anotato-frontend.vercel.app/
 
 ---
 
