@@ -1,77 +1,76 @@
+import { useEffect, useState } from "react";
+import Card from "../components/Card/Card";
 import Header from "../components/Header/Header";
 import "./Dashboard.css";
+import { getTasks } from "../../services/tasksService";
 
 export default function Dashboard() {
 
-    function handleLogout(){
+    const [tasks, setTasks] = useState([]);
 
-    }
+    useEffect(() => {
+        async function fetchData(){
+            const data = await getTasks();
+            setTasks(data);
+        }
+
+        fetchData();
+    }, []);
+
+    const totalTasks = tasks.length;
+    const completedTasks = tasks.filter(task => task.completed).length;
+    const pendentes = totalTasks - completedTasks;
 
     return (
     <div className="dashboard">
         
         <Header 
             title="Dashboard"
-            onLogout={handleLogout}  
-            activeTab="pending"  
         />
 
-        {/* MAIN */}
         <main className="dashboard-main">
 
-        {/* CARDS */}
-        <section className="cards">
-            <div className="card">
-            <p>Total</p>
-            <h2>5</h2>
-            </div>
+            <section className="cards">
+                <Card title="Total" value={totalTasks}/>
+                <Card title="Concluídas" value={completedTasks}/>
+                <Card title="Pendentes" value={pendentes}/>
+            </section>
 
-            <div className="card">
-            <p>Concluídas</p>
-            <h2>2</h2>
-            </div>
+            {/* TASK BOX */}
+            <section className="task-box">
+                <div className="task-header">
+                <h2>Tarefas</h2>
+                </div>
 
-            <div className="card">
-            <p>Pendentes</p>
-            <h2>3</h2>
-            </div>
-        </section>
+                {/* INPUT */}
+                <div className="task-create">
+                <input placeholder="Nova tarefa..." />
+                <button>Adicionar</button>
+                </div>
 
-        {/* TASK BOX */}
-        <section className="task-box">
-            <div className="task-header">
-            <h2>Tarefas</h2>
-            </div>
+                {/* LISTA (somente pendentes) */}
+                <div className="task-list">
+                <ul>
 
-            {/* INPUT */}
-            <div className="task-create">
-            <input placeholder="Nova tarefa..." />
-            <button>Adicionar</button>
-            </div>
+                    <li>
+                    <span>Estudar React</span>
+                    <button className="btn-finish">Finalizar</button>
+                    </li>
 
-            {/* LISTA (somente pendentes) */}
-            <div className="task-list">
-            <ul>
+                    <li>
+                    <span>Fazer projeto</span>
+                    <button className="btn-finish">Finalizar</button>
+                    </li>
 
-                <li>
-                <span>Estudar React</span>
-                <button className="btn-finish">Finalizar</button>
-                </li>
+                    <li>
+                    <span>Estudar backend</span>
+                    <button className="btn-finish">Finalizar</button>
+                    </li>
 
-                <li>
-                <span>Fazer projeto</span>
-                <button className="btn-finish">Finalizar</button>
-                </li>
+                </ul>
+                </div>
 
-                <li>
-                <span>Estudar backend</span>
-                <button className="btn-finish">Finalizar</button>
-                </li>
-
-            </ul>
-            </div>
-
-        </section>
+            </section>
         </main>
     </div>
     );
